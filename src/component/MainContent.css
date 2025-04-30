@@ -1,0 +1,345 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .header h3 {
+    font-size: 1.3em;
+    font-weight: 350;
+    color: rgb(88, 81, 77);
+  }
+  .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .whole-center-content {
+    max-width: 900px;
+    margin: auto;
+  }
+  .center-content h1 {
+    font-size: 4em;
+    font-weight: 350;
+    padding-top: 30px;
+    background: linear-gradient(
+      to right,
+      rgb(103, 135, 227) 10%,
+      rgb(228, 94, 98) 30%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex;
+    justify-content: start;
+  }
+  .center-content span {
+    font-size: 4em;
+    font-weight: 350;
+    padding-top: 5px;
+    color: rgb(196, 199, 197);
+    display: block;
+  }
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .input-box-container {
+    width: 200px;
+    height: 180px;
+    background-color: rgb(240, 244, 249);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .input-box-container:hover {
+    background-color: rgb(229, 234, 238);
+  }
+  .input-box-container p {
+    line-height: 20px;
+  }
+  .input-box-container img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 150px;
+    bottom: 15px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+  }
+  .prompt {
+  
+    bottom: 40px;
+    background-color: rgb(240, 244, 249);
+    width: 100%;
+    max-width: 900px;
+    padding: 0 10px;
+    border-radius: 40px;
+    margin: 10px auto;
+  }
+  .input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .input-box input {
+    border: none;
+    outline: none;
+    background: transparent !important;
+    padding: 10px 20px;
+    flex: 1;
+    font-size: 1.3em;
+    color: rgb(81, 80, 80);
+  }
+  
+  .input-icon img {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer !important;
+    border-radius: 50%;
+    padding: 7px;
+  }
+  
+  .input-icon img:hover {
+    background-color: rgb(201, 208, 213);
+  }
+  
+  .input-box .input-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .last-para {
+    text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+    margin: 15px auto;
+  }
+  
+  .result {
+    height: 70vh;
+    margin: auto 70px;
+  }
+  .result-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  .result-title p{
+    font-size: 1.2em;
+  }
+  .result-title img {
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .result-data {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow-y: scroll;
+    padding: 20px 20px;
+    width: 90%;
+    height: 50vh;
+  }
+  .result-data::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .result-data img {
+    width: 40px;
+    margin-right: 20px;
+  }
+  .result-data p{
+    font-size: 1.2em;
+    font-weight: 500;
+    
+  }
+  
+  .result-data .loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .loader hr {
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(229, 234, 238);
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    animation: loader 3s infinite linear;
+  }
+  @keyframes loader {
+    0% {
+      background-position: -800px 0;
+    }
+    100% {
+      background-position: 800px 50px;
+    }
+  }
+  .result-data p {
+    line-height: 30px;
+  }
+  
+  /* @media screen and (max-width:665px){
+      .main-container{
+          height:100vh;
+      }
+      .center-content h1{
+          font-size:2em;
+      }
+      .center-content span{
+          font-size:2em;
+      }
+      .content-container{
+          gap:10px;
+          margin-top: 5px;
+      }
+      .input-box-container{
+          width:130px;
+          height:130px;
+      }
+      .input-box-container p{
+          line-height: 15px;
+          font-size: 0.8em;
+      }
+      .input-box-container img{
+          width:20px;
+          height:20px;
+          left:95px;
+          bottom:10px;
+      }
+      .prompt input{
+          width:80%;
+          height:20px;
+          margin-top:-10px;
+      }
+      .prompt .gallery{
+          width:20px;
+          height:20px;
+          right:90px;
+          top:0;
+      }
+      .prompt .mic{
+          width:20px;
+          height:20px;
+          right:70px;
+          top:0;
+      }
+      .last-para{
+          font-size: 0.6em;
+          display:flex;
+          justify-content: center;
+          
+      }
+  }
+  
+  @media screen and (max-width:500px){
+      .main-container{
+          height:100vh;
+      }
+      .center-content h1{
+          font-size:2em;
+      }
+      .center-content span{
+          font-size:2em;
+      }
+      .content-container{
+          gap:10px;
+          margin-top: 2px;
+      }
+      .input-box-container{
+          width:130px;
+          height:130px;
+      }
+      .input-box-container p{
+          line-height: 15px;
+          font-size: 0.8em;
+      }
+      .input-box-container img{
+          width:20px;
+          height:20px;
+          left:95px;
+          bottom:10px;
+      }
+      .prompt input{
+          width:80%;
+          height:20px;
+          margin-top:-10px;
+      }
+      .prompt .gallery{
+          width:20px;
+          height:20px;
+          right:90px;
+          top:0;
+      }
+      .prompt .mic{
+          width:20px;
+          height:20px;
+          right:70px;
+          top:0;
+      }
+      .last-para{
+          font-size: 0.6em;
+          display:flex;
+          justify-content: center;
+          }
+  }
+  
+  @media screen and (max-width:400px){
+      .main-container{
+          height:100vh;
+      }
+      .center-content h1{
+          font-size:2em;
+      }
+      .center-content span{
+          font-size:2em;
+      }
+      .content-container{
+          gap:10px;
+      }
+      .input-box-container{
+          width:130px;
+          height:130px;
+      }
+      .input-box-container p{
+          line-height: 15px;
+          font-size: 0.8em;
+      }
+      .input-box-container img{
+          width:20px;
+          height:20px;
+          left:95px;
+          bottom:10px;
+  }
+      
+  } */
+  

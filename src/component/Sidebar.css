@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main{
+    display:flex;
+}
+
+.sidebar{
+  
+    height:100vh;
+    background-color: rgb(240, 244, 249);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 30px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.top-content{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.top-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width:100%;
+    align-items: start;
+    height:50%;
+ 
+}
+.top-first .menu-icon{
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:30px;
+}
+.chat{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: transparent;
+    padding:10px;
+    border-radius: 50px;
+    margin-bottom:50px;
+    color:grey;
+   
+
+}
+.chat:hover{
+    background-color: rgb(230, 234, 241);
+    border-radius: 50px;
+}
+.recent-container{
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.recent-question{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+}
+.recent-question:hover{
+    background-color: rgb(230, 234, 241);
+    border-radius: 50px;
+}
+.recent-question img{
+    display:flex;
+    justify-content: flex-start;
+    align-items: start;
+
+}
+
+.bottom-content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap:15px;
+
+
+}
+
+
+.question-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+    
+}
+.question-container:hover{
+    background-color:rgb(230, 234, 241);
+   
+    border-radius: 50px;
+}
+.activity-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+
+}
+.activity-container:hover{
+    background-color:rgb(230, 234, 241);
+    border-radius: 50px;
+}
+.setting-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+
+}
+.setting-container:hover{
+    background-color:rgb(230, 234, 241);
+    border-radius: 50px;
+}
