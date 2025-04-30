@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "gemini" // Change with your image name
+        IMAGE_NAME = "gemini"  
         CONTAINER_NAME = "Gemini"
-        PORT = "8080" // Change if needed
-        REPO_URL = "https://github.com/Lourdez/Gemini-Clone-project.git" // Update with your repo
-        BRANCH = "main" // Update the branch if needed
+        PORT = "3000"  
+        REPO_URL = "https://github.com/Lourdez/Gemini-Project.git"  
+        BRANCH = "main"  
     }
 
     stages {
@@ -18,18 +18,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Build React App') {
-            steps {
-                script {
-                    echo "Installing dependencies and building Vite app..."
-                    sh 'npm install'
-                    sh 'npm run build'
-                }
-            }
-        }
-
-        stage('Build Docker Image') {
+      stage('Build Docker Image') {
             steps {
                 script {
                     echo "Building Docker image..."
@@ -37,8 +26,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Stop and Remove Existing Container') {
+               stage('Stop and Remove Existing Container') {
             steps {
                 script {
                     echo "Stopping and removing existing container if running..."
@@ -55,7 +43,7 @@ pipeline {
                 script {
                     echo "Running new Docker container..."
                     sh """
-                        docker run -d -p ${PORT}:80 --name ${CONTAINER_NAME} ${IMAGE_NAME}:latest
+                        docker run -itd -p ${PORT}:80 --name ${CONTAINER_NAME} ${IMAGE_NAME}:latest
                     """
                 }
             }
