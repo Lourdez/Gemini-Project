@@ -32,7 +32,7 @@ const MainContent = () => {
         {!showResult ? (
           <div className="whole-center-content">
             <div className="center-content">
-              <h1>Hello, I Am Parker's Chat Bot powered by Gemni </h1>
+              <h1>Hello, I Am Parker's Chat  </h1>
               <h1> </h1>
               <span>From SRMIST</span>
               <span>How can I help you today?</span>
